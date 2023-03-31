@@ -1,0 +1,188 @@
+use MovieRentalDb
+
+db.createCollection("movies")
+db.movies.insertMany(
+	[
+		{
+			"title": "The Shawshank Redemption",
+			"genre": ["Drama"],
+			"director": "Frank Darabont",
+			"duration": 142,
+			"rating": 9.3,
+			"description": "Over the course of several years, two convicts form a friendship, seeking consolation and, eventually, redemption through basic compassion.",
+			"actors": ["Tim Robbins", "Morgan Freeman"],
+			"added_date": new Date()
+		},
+		{
+			"title": "The Godfather",
+			"genre": ["Crime", "Drama"],
+			"director": "Francis Ford Coppola",
+			"duration": 175,
+			"rating": 9.2,
+			"description": "The aging patriarch of an organized crime dynasty in postwar New York City transfers control of his clandestine empire to his reluctant youngest son.",
+			"actors": ["Marlon Brando", "Al Pacino"],
+			"added_date": new Date()
+		},
+		{
+			"title": "The Dark Knight",
+			"genre": ["Action", "Crime", "Drama"],
+			"director": "Christopher Nolan",
+			"duration": 152,
+			"rating": 9,
+			"description": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
+			"actors": ["Christian Bale", "Heath Ledger"],
+			"added_date": new Date()
+		},
+		{
+			"title": "Inception",
+			"genre": ["Action", "Adventure", "Sci-Fi"],
+			"director": "Christopher Nolan",
+			"duration": 148,
+			"rating": 9,
+			"description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.",
+			"actors": ["Leonardo DiCaprio", "Elliot Page"],
+			"added_date": new Date()
+		},
+		{
+			"title": "Kimi no na wa.",
+			"genre": ["Animation", "Drama", "Fantasy"],
+			"director": "Makoto Shinkai",
+			"duration": 106,
+			"rating": 8.4,
+			"description": "Two strangers find themselves linked in a bizarre way. When a connection forms, will distance be the only thing to keep them apart?",
+			"actors": ["Ryunosuke Kamiki", "Mone Kamishiraishi"],
+			"added_date": new Date()
+		},
+		{
+			"title": "John Wick: Chapter 4",
+			"genre": ["Action", "Crime", "Thriller"],
+			"director": "Chad Stahelski",
+			"duration": 169,
+			"rating": 8.5,
+			"description": "John Wick uncovers a path to defeating The High Table. But before he can earn his freedom, Wick must face off against a new enemy with powerful alliances across the globe and forces that turn old friends into foes.",
+			"actors": ["Keanu Reeves", "Laurence Fishburne"],
+			"added_date": new Date()
+		},
+		{
+			"title": "The Whale",
+			"genre": ["Drama"],
+			"director": "Darren Aronofsky",
+			"duration": 117,
+			"rating": 7.8,
+			"description": "A reclusive, morbidly obese English teacher attempts to reconnect with his estranged teenage daughter.",
+			"actors": ["Brendan Fraser", "Sadie Sink"],
+			"added_date": new Date()
+		},
+		{
+			"title": "Cocaine Bear",
+			"genre": ["Comedy", "Thriller"],
+			"director": "Elizabeth Banks",
+			"duration": 95,
+			"rating": 6.1,
+			"description": "An oddball group of cops, criminals, tourists and teens converge on a Georgia forest where a huge black bear goes on a murderous rampage after unintentionally ingesting cocaine.",
+			"actors": ["Keri Russell", "Alden Ehrenreich"],
+			"added_date": new Date()
+		},
+		{
+			"title": "Winnie-the-Pooh: Blood and Honey",
+			"genre": ["Horror"],
+			"director": "Rhys Frake-Waterfield",
+			"duration": 84,
+			"rating": 3.4,
+			"description": "After Christopher Robin abandons them for college, Pooh and Piglet embark on a bloody rampage as they search for a new source of food.",
+			"actors": ["Nikolai Leon", "Maria Taylor"],
+			"added_date": new Date()
+		},
+		{
+			"title": "Fall",
+			"genre": ["Thriller"],
+			"director": "Scott Mann",
+			"duration": 107,
+			"rating": 6.4,
+			"description": "Best friends Becky and Hunter find themselves at the top of a 2,000-foot radio tower.",
+			"actors": ["Grace Caroline Currey", "Virginia Gardner"],
+			"added_date": new Date()
+		},
+	]
+)
+
+
+db.createCollection("users")
+db.users.insertMany(
+	[
+		{
+			"name": "Szymon",
+			"surname": "Kamiński",
+			"adress": "Żytnia 10, 41-200 Sosnowiec",
+			"phone_number": "48500100200",
+			"registration_date": new Date()
+		},
+		{
+			"name": "Kamil",
+			"surname": "Kamilowski",
+			"adress": "Kamilowska 55, 41-200 Sosnowiec",
+			"phone_number": "48600100300",
+			"registration_date": new Date()
+		},
+		{
+			"name": "Ryszard",
+			"surname": "Ryszardowski",
+			"adress": "Ryszardowska 13/7, 41-200 Sosnowiec",
+			"phone_number": "48500500500",
+			"registration_date": new Date()
+		},
+		{
+			"name": "Stefan",
+			"surname": "Stefanowski",
+			"adress": "Stefanowska 1, 41-200 Sosnowiec",
+			"phone_number": "48600900420",
+			"registration_date": new Date()
+		},
+		{
+			"name": "Tomeo",
+			"surname": "Genko",
+			"adress": "Big City Energy 999, 83-200 Starogard Gdański",
+			"phone_number": "68669442001",
+			"registration_date": new Date()
+		},
+		
+	]
+)
+
+db.createCollection("rentals")
+db.rentals.insertMany(
+	[
+		{
+			"user_phone": "48500100200",
+			"movie_title": "Inception",
+			"rental_date": new Date(),
+			"expected_return": new Date(new Date().getTime() + 7 * 24 * 60 * 60 * 1000),
+			"actual_return": new Date(new Date().getTime() + 3 * 24 * 60 * 60 * 1000)
+
+		},
+		{
+			"user_phone": "68669442001",
+			"movie_title": "Fall",
+			"rental_date": new Date(),
+			"expected_return": new Date(new Date().getTime() + 7 * 24 * 60 * 60 * 1000),
+			"actual_return": new Date(new Date().getTime() + 1 * 24 * 60 * 60 * 1000)
+
+		},
+		{
+			"user_phone": "48600900420",
+			"movie_title": "Winnie-the-Pooh: Blood and Honey",
+			"rental_date": new Date(),
+			"expected_return": new Date(new Date().getTime() + 7 * 24 * 60 * 60 * 1000),
+			"actual_return": new Date(new Date().getTime() + 3 * 24 * 60 * 60 * 1000)
+
+		},
+		{
+			"user_phone": "48500500500",
+			"movie_title": "Cocaine Bear",
+			"rental_date": new Date(),
+			"expected_return": new Date(new Date().getTime() + 7 * 24 * 60 * 60 * 1000),
+			"actual_return": new Date(new Date().getTime() + 3 * 24 * 60 * 60 * 1000)
+
+		},
+	]
+)

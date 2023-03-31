@@ -1,0 +1,34 @@
+1. Wyświetla wszystkie dostępne filmy do wypożyczenia (lp, tytuł,
+gatunek, reżyser, czas trwania). Ponadto możliwe jest wyświetlenie szczegółowych informacji
+o każdym z filmów (opis, ocena, obsada aktorska) 
+
+Brak: Filmy wypożyczone nie są uwzględniane na
+liście (lub są oznaczone jako niedostępne). Możliwe jest także sortowanie oraz wyszukiwanie
+po tytule lub gatunku.
+
+
+2. Wyświetl listę wszystkich wypożyczeń – wyświetla listę wypożyczeń dokonanych przez każdego
+klienta w formie (dane klienta ,tytuł filmu, data i godzina wypożyczenia, data i godzina
+planowanego zwrotu, data i godzina faktycznego zwrotu).
+
+Brak: Możliwe jest sortowanie po danych
+klienta, dacie wypożyczenia oraz wyszukiwanie po danych klienta, id_filmu, tytule filmu, dacie
+wypożyczenia. Możliwe jest także zwrócenie filmu wypożyczonego przez określonego klienta.
+
+3. Dodaj nowego klienta.
+4. Usuń klienta
+5.Dodaj nowy film.
+6. Usuń film.
+
+Brak: 
+
+Wypożycz film – po podaniu tytułu filmu i id_klienta lub jego imienia + nazwiska, jeśli dany film
+jest dostępny do wypożyczenia i klient nie przekroczył jeszcze limitu wypożyczeń to program
+zapisuje fakt wypożyczenia (rejestrując datę i godzinę wypożyczenia, obliczając datę
+planowanego zwrotu)
+
+Modyfikuj dane klienta – wyświetla listę wszystkich klientów. I umożliwia modyfikacje
+wszystkich danych określonego klienta.
+
+Modyfikuj opis filmu – wyświetla listę wszystkich filmów i umożliwia modyfikacje wszelkich
+danych dla każdego filmu danych.

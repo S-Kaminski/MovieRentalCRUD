@@ -1,0 +1,18 @@
+<% for(var i=0; i < rentals.length; i++) { %>
+    <tr>
+        <td><%= i+1 %> </td>
+        <td><%= rentals[i].user_phone %></td>
+        <td><%= rentals[i].movie_title %></td>
+        <td><%= rentals[i].rental_date %></td>
+        <td><%= rentals[i].expected_return %></td>
+        <td><%= rentals[i].actual_return %></td>
+
+        <td>
+            <a href="#" class="btn border-shadow delete" data-id=<%= rentals[i]._id %> >
+                <span class="text-gradient">
+                    <i class="fas fa-times"></i> 
+                </span>
+            </a>
+        </td>
+    </tr>
+<% } %>

@@ -1,0 +1,34 @@
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+<!-- Form handling -->
+    <form action="/" method="POST">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>no.</th>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>Adress</th>
+                    <th>Phone number</th>
+                    <th>Registration date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <%- include('include/_show_users') %>
+            </tbody>
+
+        </table>
+    </form><!-- /Form handling -->
+
+
+<!-- include footer -->
+    <%- include('include/_footer') %>
+<!-- /include footer -->
+
+
+
+    

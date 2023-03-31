@@ -1,0 +1,42 @@
+<!-- form handling -->
+<form action="/api/movies" method="POST" id="add_movie">
+    <div class="new_movie">
+        <div class="form-group">
+            <label for="title" class="text-light">Title</label>
+            <input type="hidden" name="id" value="">
+            <input type="hidden" name="added_date" value="<%= new Date().toISOString() %>">
+            <input type="text" name="title" value="" placeholder="Movie title...">
+        </div>
+        <div class="form-group">
+            <label for="genre" class="text-light">Genre</label>
+            <input type="text" name="genre" value="" placeholder="Movie genre...">
+        </div>
+        <div class="form-group">
+            <label for="director" class="text-light">Director</label>
+            <input type="text" name="director" value="" placeholder="Movie director...">
+        </div>
+        <div class="form-group">
+            <label for="duration" class="text-light">Duration (minutes)</label>
+            <input type="number" name="duration" value="" placeholder="Movie duration...">
+        </div>
+        <div class="form-group">
+            <label for="rating" class="text-light">Rating</label>
+            <input type="number" name="rating" value="0" placeholder="Movie Rating...">
+        </div>
+        <div class="form-group">
+            <label for="description" class="text-light">Description</label>
+            <input type="text" name="description" value="" placeholder="Movie description...">
+        </div>
+        <div class="form-group">
+            <label for="actors" class="text-light">Actor</label>
+            <input type="text" name="actors" value="" placeholder="Movie actor...">
+        </div>
+
+
+
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Save</button>
+        </div>
+
+    </div>
+</form>

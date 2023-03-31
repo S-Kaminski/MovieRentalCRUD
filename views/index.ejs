@@ -1,0 +1,36 @@
+<!-- include header -->
+    <%- include('include/_header') %>
+<!-- /include header -->
+
+<!-- Form handling -->
+    <form action="/" method="POST">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>no.</th>
+                    <th>Title</th>
+                    <th>Genre</th>
+                    <th>Director</th>
+                    <th>Duration (minutes)</th>
+                    <th>Rating</th>
+                    <th>Description</th>
+                    <th>Actors</th>
+                    <th>Movie added date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <%- include('include/_show') %>
+            </tbody>
+            
+        </table>
+    </form><!-- /Form handling -->
+
+
+<!-- include footer -->
+    <%- include('include/_footer') %>
+<!-- /include footer -->
+
+
+
+    

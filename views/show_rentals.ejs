@@ -1,0 +1,32 @@
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+<!-- Form handling -->
+    <form action="/" method="POST">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>no.</th>
+                    <th>User phone number</th>
+                    <th>Movie title</th>
+                    <th>Rental date</th>
+                    <th>Expected return of rented movie date</th>
+                    <th>Actual return of rented movie</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <%- include('include/_show_rentals') %>
+            </tbody>
+        </table>
+    </form><!-- /Form handling -->
+
+
+<!-- include footer -->
+    <%- include('include/_footer') %>
+<!-- /include footer -->
+
+
+
+    
