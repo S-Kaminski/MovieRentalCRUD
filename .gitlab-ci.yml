@@ -1,0 +1,30 @@
+image: node:latest
+
+stages:
+  - build
+  - test
+  - deploy
+
+variables:
+  MONGO_URI: mongodb://127.0.0.1:27017/MovieRentalDb?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.8.0
+  NODE_ENV: production
+  VERSION: $CI_COMMIT_SHORT_SHA
+
+before_script:
+  - npm install
+
+build:
+  stage: build
+  script:
+    - npm run build
+    - docker build -t app:$VERSION .
+
+test:
+  stage: test
+  script:
+    - npm run test
+
+deploy:
+  stage: deploy
+  script:
+    - docker run -d -p 3000:3000 -e MONGO_URI=$MONGO_URI myapp:$VERSION
